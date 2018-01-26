@@ -29,6 +29,7 @@ function readDic(){
 
 function search($key, $langFrom, $langTo){
     $dic = readDic();
+    $mainWordArray = [];
 
     foreach ($dic as $i){
         foreach ($i as $j){
@@ -62,13 +63,12 @@ function redirect($url)
 
 
 function addWord($newArr){
-    echo 'FUNCTION addWord<br>';
-    echo $newArr['lt'].'<br>';
-    echo $newArr['en'].'<br>';
-    echo $newArr['ru'].'<br>';
-    echo $newArr['pl'].'<br>';
+    // echo 'FUNCTION addWord<br>';
+    // echo $newArr['lt'].'<br>';
+    // echo $newArr['en'].'<br>';
+    // echo $newArr['ru'].'<br>';
+    // echo $newArr['pl'].'<br>';
 
-    echo 'WRITTING<br>';
     $write = fopen('dic.csv','a');
 
     fputcsv($write,[
@@ -80,6 +80,7 @@ function addWord($newArr){
 
     fclose($write);
 
+    echo 'Added to dictionary!<br>';
 }
 
 ?>

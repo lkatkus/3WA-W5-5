@@ -33,14 +33,15 @@
                             <input type="text" class="form-control" value="<?php if($_GET['langFrom'] == 'pl'){echo $_GET['searchKey'];}?>"name="newPl" placeholder="Enter word in polish">
                         </div>
 
-                        <button class="btn btn-primary" type="submit" name="button">Submit</button>
-                        <a href="index-read.php"><button class="btn btn-primary" type="button" name="button">Home</button></a>
+                        <button class="btn btn-info" type="submit" name="button">Submit</button>
+                        <a href="index-read.php"><button class="btn btn-info" type="button" name="button">Home</button></a>
 
                     </form>
                 </div>
 
                 <div class="col-6">
 
+                    <h4>
                         <?php
                             $newWord = null;
                             if($newWord==null){
@@ -58,19 +59,21 @@
                                         'pl' => $newPl
                                     ];
 
-                                    var_dump($newArr);
+                                    // var_dump($newArr);
 
-                                    echo '<br>===============<br>';
+                                    // echo '<br>===============<br>';
 
-                                    if($newArr){
+                                    // SEARCH IF WORD IS ALREADY IN DICTIONARY
+                                    $checkDic = search($newLt,'lt','en');
+                                    if(!$checkDic){
                                         addWord($newArr);
-                                    }
-                                    else{
-                                        echo 'Please, enter a word';
+                                    }else{
+                                        echo "Already in dictionary!";
                                     }
                                 }
                             }
                         ?>
+                    </h4>
 
                 </div>
             </div>

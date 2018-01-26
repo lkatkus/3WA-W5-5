@@ -19,8 +19,8 @@
 
             <div class="row">
                 <div class="col-12 px-0">
-                    <a class="btn btn-info" href="index-show.php">Show dictionary</a>
-                    <a class="btn btn-info" href="index-new.php">Add new word</a>
+                    <a class="btn btn-secondary" href="index-show.php">Show dictionary</a>
+                    <a class="btn btn-secondary" href="index-new.php">Add new word</a>
                 </div>
             </div>
 
@@ -51,13 +51,13 @@
                         </div>
 
                         <div class="py-3">
-                            <button class="btn btn-primary" type="submit" name="button">Search</button>
+                            <button class="btn btn-info" type="submit" name="button">Search</button>
                             <?php
-                                if(array_key_exists('searchKey',$_GET)){
-                                    $key=$_GET['searchKey'];
-                                    $langFrom=$_GET['langFrom'];
-                                    echo '<a class="btn btn-primary" href="index-new.php?searchKey='.$key.'&langFrom='.$langFrom.'">Add new word</a>';
-                                }
+                                // if(array_key_exists('searchKey',$_GET)){
+                                //     $key=$_GET['searchKey'];
+                                //     $langFrom=$_GET['langFrom'];
+                                //     echo '<a class="btn btn-primary" href="index-new.php?searchKey='.$key.'&langFrom='.$langFrom.'">Add this word?</a>';
+                                // }
                             ?>
                         </div>
                     </form>
@@ -79,6 +79,7 @@
                                                 echo $result;
                                             }else{
                                                 echo 'No such word found';
+                                                echo '<a class="btn btn-warning" href="index-new.php?searchKey='.$key.'&langFrom='.$langFrom.'">Add this word?</a>';
                                             }
                                         }
                                     }
