@@ -25,7 +25,7 @@
             </div>
 
             <div class="row py-3">
-                <div class="col-6">
+                <div class="col-7">
                     <form action="index-read.php" method="get">
                         <div class="form-group">
                             <input type="text" class="form-control" name="searchKey" placeholder="Enter word">
@@ -56,7 +56,7 @@
                     </form>
                 </div>
 
-                <div class="col-6">
+                <div class="col-5">
                     <div class="row">
                         <div class="col-12">
                             <h4>

@@ -22,7 +22,7 @@
             </div>
 
             <div class="row py-3">
-                <div class="col-6">
+                <div class="col-7">
                     <table class="table text-center">
                         <tr>
                             <th>Num.</th>

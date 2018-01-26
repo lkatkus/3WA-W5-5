@@ -11,13 +11,20 @@
 
         <div class="container py-3">
             <div class="row">
-                <div class="col-6 px-0">
+                <div class="col-6">
                     <h2>MEGA DICTIONARY</h2>
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-12">
+                    <a href="index-read.php"><button class="btn btn-secondary" type="button" name="button">Home</button></a>
+                    <a class="btn btn-secondary" href="index-show.php">Show dictionary</a>
+                </div>
+            </div>
+
             <div class="row py-3">
-                <div class="col-6 px-0">
+                <div class="col-7">
                     <form action="index-new.php" method="get">
 
                         <div class="form-group">
@@ -34,12 +41,11 @@
                         </div>
 
                         <button class="btn btn-info" type="submit" name="button">Submit</button>
-                        <a href="index-read.php"><button class="btn btn-info" type="button" name="button">Home</button></a>
 
                     </form>
                 </div>
 
-                <div class="col-6">
+                <div class="col-5">
 
                     <h4>
                         <?php
