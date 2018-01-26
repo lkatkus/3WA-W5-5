@@ -79,8 +79,7 @@ function addWord($newArr){
     ]);
 
     fclose($write);
-
-    echo 'Added to dictionary!<br>';
+    return 'Added to dictionary!<br>';
 }
 
 ?>

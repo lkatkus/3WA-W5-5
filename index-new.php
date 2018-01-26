@@ -58,18 +58,23 @@
                                         'ru' => $newRu,
                                         'pl' => $newPl
                                     ];
-
                                     // var_dump($newArr);
 
-                                    // echo '<br>===============<br>';
 
-                                    // SEARCH IF WORD IS ALREADY IN DICTIONARY
-                                    $checkDic = search($newLt,'lt','en');
-                                    if(!$checkDic){
-                                        addWord($newArr);
+                                    if(strlen($newLt) > 0 && strlen($newEn) > 0 && strlen($newRu) > 0 && strlen($newPl) > 0){
+                                        // SEARCH IF WORD IS ALREADY IN DICTIONARY
+                                        $checkDic = search($newLt,'lt','en');
+                                        if(!$checkDic){
+                                            addWord($newArr);
+                                        }else{
+                                            echo "Already in dictionary!";
+                                        }
                                     }else{
-                                        echo "Already in dictionary!";
-                                    }
+                                        echo "Please fill all values";
+                                    };
+
+
+
                                 }
                             }
                         ?>
