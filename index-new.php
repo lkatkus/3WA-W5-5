@@ -63,7 +63,7 @@
 
                                     if(strlen($newLt) > 0 && strlen($newEn) > 0 && strlen($newRu) > 0 && strlen($newPl) > 0){
                                         // SEARCH IF WORD IS ALREADY IN DICTIONARY
-                                        $checkDic = search($newLt,'lt','en');
+                                        $checkDic = search($newLt,'lt','en'); /* ADD BETTER CHECKING */
                                         if(!$checkDic){
                                             addWord($newArr);
                                         }else{

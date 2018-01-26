@@ -28,6 +28,7 @@ function readDic(){
 }
 
 function search($key, $langFrom, $langTo){
+    $key = strtolower($key);
     $dic = readDic();
     $mainWordArray = [];
 
